@@ -27,8 +27,8 @@ def salvaArquivos (f_caminho, nomeArquivo, linCol):
 def abreArquivos (f_caminho):               #abreArquivos recebe o caminho 
     for f in os.listdir():                  #Aqui checamos o caminho          
         if f.endswith(".txt"):              #Checa se o arquivo é um .txt
-            f_caminho = f"{caminho}\{f}"      
-            contaMatriz(f_caminho)          #Hora de contar a Matriz
+            f_caminho = f"{caminho}\{f}"    #Encontrei minha instância  
+            contaMatriz(f_caminho)          #Enviando o caminho da instância para contaMatriz
 
 
 if __name__ == "__main__":
