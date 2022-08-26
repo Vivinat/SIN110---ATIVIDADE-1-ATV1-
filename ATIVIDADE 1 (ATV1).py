@@ -3,7 +3,7 @@ import time
 import os
 
 caminho = r'c:\Users\Particular\Desktop\PYTHON\Instancias'   #Insira aqui o caminho onde se encontra os arquivos .txt
-extensao = 'txt'                                             #Deseja que o arquivo seja salvo em outra extensão? Padrão: .doc
+extensao = 'doc'                                             #Deseja que o arquivo seja salvo em outra extensão? Padrão: .doc
 os.chdir(caminho)
 
 def contaMatriz (f_caminho):
