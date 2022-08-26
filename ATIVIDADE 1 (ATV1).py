@@ -3,7 +3,6 @@ import time
 import os
 
 caminho = r'c:\Users\Particular\Desktop\PYTHON\Instancias'                      #Insira aqui o caminho onde se encontra os arquivos .txt
-caminho_resultado = r'c:\Users\Particular\Desktop\PYTHON\Instancias\resultados' #Insira aqui o caminho onde deseja salvar os resultados
 os.chdir(caminho)
 
 def contaMatriz (f_caminho):
@@ -19,7 +18,7 @@ def contaMatriz (f_caminho):
 def salvaArquivos (f_caminho, nomeArquivo, linCol):
     t_total = time.time() - t_inicio                                                     #Timer acaba aqui
     resultado = str(nomeArquivo) + " " + str(linCol) + " ; " + str("%.4f" % t_total)     #Resultados são unidos
-    arquivo = open(caminho_resultado + r'\resultados.txt', 'a+')                         #Os resultados serão armazenados no caminho selecionado anteriormente
+    arquivo = open(caminho + r'\resultados.doc', 'a+')                                   #Os resultados serão armazenados no caminho selecionado anteriormente
     arquivo.writelines(resultado + '\n')
     arquivo.close()
 
@@ -28,7 +27,7 @@ def abreArquivos (f_caminho):               #abreArquivos recebe o caminho
     for f in os.listdir():                  #Aqui checamos o caminho          
         if f.endswith(".txt"):              #Checa se o arquivo é um .txt
             f_caminho = f"{caminho}\{f}"    #Encontrei minha instância  
-            contaMatriz(f_caminho)          #Enviando o caminho da instância para contaMatriz
+            contaMatriz(f_caminho)          #Enviando o caminho da instância para 
 
 
 if __name__ == "__main__":
